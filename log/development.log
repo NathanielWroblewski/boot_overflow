@@ -84,3 +84,5 @@ Served asset /sextant/sextant.js - 304 Not Modified (4ms)
 
 Started GET "/assets/sextant/application.js?body=1" for 127.0.0.1 at 2013-06-05 12:12:34 -0700
 Served asset /sextant/application.js - 304 Not Modified (4ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml

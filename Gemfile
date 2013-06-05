@@ -32,6 +32,8 @@ group :development, :test do
   gem 'faker'
 end
 
+gem 'haml'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

@@ -27,6 +27,9 @@ class UsersController < ApplicationController
 		current_user.destroy
 		redirect '/'
 	end 
-
+  
+  def login
+    
+  end
 
 end
