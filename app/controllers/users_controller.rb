@@ -3,8 +3,6 @@ class UsersController < ApplicationController
 	
 	def create
 		@user = new_user(params[:user])
-		session[:id] = @user.id
-		redirect '/profile'
 	end
 
 	def new
@@ -29,7 +27,12 @@ class UsersController < ApplicationController
 	end 
   
   def login
-    
+  	authenticate_user(params[:user])  
+  end
+
+  def logout
+  	session.clear
+  	redirect '/'
   end
 
 end
