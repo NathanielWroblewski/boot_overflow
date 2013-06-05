@@ -26,6 +26,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl'
+  gem 'shoulda-matchers'
 end
 
 # To use Jbuilder templates for JSON
