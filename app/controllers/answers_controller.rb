@@ -8,12 +8,23 @@ class AnswersController < ApplicationController
 
 	def edit
 		@answer = Answer.find(params[:id])
+		if current_user.id == @answer.user_id
+			# render template
+		else
+			flash[:notice] = "You cannot edit another user's answer"
+		end
 	end
 
 	def update
 	end
 
 	def destroy
+		@answer = Answer.find(params[:id])
+		if current_user.id == @answer.user_id
+			@answer.destroy
+		else
+			flash[:notice] = "You cannot delete another user's answer"
+		end
 	end 
 
 end
