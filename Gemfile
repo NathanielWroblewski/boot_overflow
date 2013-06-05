@@ -33,6 +33,8 @@ group :development, :test do
   gem 'capybara'
 end
 
+gem 'haml'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
