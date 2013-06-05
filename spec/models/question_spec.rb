@@ -8,6 +8,11 @@ describe Question do
 
 	describe '#initialize' do
 
+		it { should belong_to(:user) }
+		it { should validate_presence_of(:title) }
+		it { should validate_presence_of(:content) }
+		it { should validate_presence_of(:user_id) }
+
 		it "should have a title" do
 		# question = Question.new(title: "Title", content: "Body of text", user_id: 1)
 			question.title.should eq(title)

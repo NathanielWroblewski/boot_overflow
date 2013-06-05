@@ -1,4 +1,4 @@
-require "spec-helper"
+require "spec_helper"
 
 describe User do
   #test relations/associations
