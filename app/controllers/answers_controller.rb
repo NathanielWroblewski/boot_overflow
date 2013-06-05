@@ -3,9 +3,11 @@ class AnswersController < ApplicationController
 	end
 
 	def new
+		@question = Question.find(params[:question_id])
 	end
 
 	def edit
+		@answer = Answer.find(params[:id])
 	end
 
 	def update

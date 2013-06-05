@@ -7,4 +7,12 @@ module UserHelper
 		end
 	end
 
+	def new_user(details)
+		user = User.new(name: details[:name], username: details[:username])
+		user.password = details[:password]
+		user.password_confirmation = details[:password_confirmation]
+		user.save
+		return user
+	end
+
 end
