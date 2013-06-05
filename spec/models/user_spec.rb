@@ -12,18 +12,20 @@ describe User do
   it { should validate_uniqueness_of(:email) }
   it { should validate_presence_of(:password_digest) }
 
-
   # test attributes
-  it "should respond to name" do
 
+  let(:user) { FactoryGirl.create(:user) }
+
+  it "should respond to name" do
+    expect(user.name).to_not raise_error(ArgumentError)
   end
 
   it "should respond to username" do
-
+    expect(user.username).to_not raise_error(ArgumentError)
   end
 
   it "should respond to email" do
-
+    expect(user.email).to_not raise_error(ArgumentError)
   end
-
+  
 end
