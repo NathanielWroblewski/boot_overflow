@@ -5,11 +5,5 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    %nav
-      = link_to "Home", root
-      %ol
-        %li
-          = link_to "Login", user_login
-          = link_to "Sign Up", new_user
+    = render "nav"
     = yield
-
