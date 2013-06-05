@@ -41,3 +41,23 @@ Connecting to database specified by database.yml
   [1m[35m (27.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
   [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130605171741')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/rails/routes" for 127.0.0.1 at 2013-06-05 12:12:33 -0700
+Processing by Sextant::RoutesController#index as HTML
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/sextant-0.2.3/app/views/sextant/routes/_route.html.erb (3.1ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/sextant-0.2.3/app/views/sextant/routes/_route_wrapper.html.erb (5.9ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/sextant-0.2.3/app/views/sextant/routes/index.html.erb within layouts/sextant/application (34.1ms)
+Compiled sextant/sextant.js  (0ms)  (pid 48079)
+Compiled sextant/application.js  (11ms)  (pid 48079)
+Completed 200 OK in 165ms (Views: 140.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sextant/sextant.js?body=1" for 127.0.0.1 at 2013-06-05 12:12:34 -0700
+Served asset /sextant/sextant.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sextant/application.js?body=1" for 127.0.0.1 at 2013-06-05 12:12:34 -0700
+Served asset /sextant/application.js - 304 Not Modified (4ms)
