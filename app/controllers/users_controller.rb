@@ -29,7 +29,12 @@ class UsersController < ApplicationController
 	end 
   
   def login
-    
+  	authenticate_user(params[:user])  
+  end
+
+  def logout
+  	session.clear
+  	redirect '/'
   end
 
 end

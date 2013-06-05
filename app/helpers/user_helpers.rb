@@ -15,4 +15,14 @@ module UserHelper
 		return user
 	end
 
+	def authenticate_user(info)
+		@user = User.find_by_email(info[:email])
+		if @user.authenticate(info[:password])
+			session[:id] = @user.id
+			redirect '/profile'
+		else
+			raise "Bad password"
+		end
+	end
+
 end
