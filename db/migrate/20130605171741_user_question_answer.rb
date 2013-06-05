@@ -24,4 +24,3 @@ class UserQuestionAnswer < ActiveRecord::Migration
     end
   end
 end
-

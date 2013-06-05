@@ -1,4 +1,15 @@
 BootOverflow::Application.routes.draw do
+
+  root :to => 'questions#index'
+  resources :users , :except => [:index]
+  match '/profile' => 'users#show'
+  
+  resources :questions do
+    resources :answers, :except => [:index, :show]
+  end
+  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
