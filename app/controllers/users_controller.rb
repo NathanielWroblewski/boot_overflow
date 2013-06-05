@@ -3,8 +3,6 @@ class UsersController < ApplicationController
 	
 	def create
 		@user = new_user(params[:user])
-		session[:id] = @user.id
-		redirect '/profile'
 	end
 
 	def new
