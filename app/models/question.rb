@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :title, :content, :user_id
+  attr_accessible :title, :content, :user_id, :up_votes, :down_votes
   make_voteable
 
   belongs_to :user

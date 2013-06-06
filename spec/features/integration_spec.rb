@@ -41,10 +41,21 @@ describe "signing up" do
 end
 
 describe "voting" do
-
+	before do
+		 create(:user)
+		 create(:user)
+	end
+	let(:question1) {create (:question)}
+	let(:question2) {create (:question)}
+	let(:question3) {create (:question)}
+	
 	context	"upvoting" do
-		it "" do
+		it "upvote a question", :js => true do
+			visit "/questions"
 
+     expect {
+      click_link ('question1')
+      }.to change(Question, :up_vote).by(1)
 		end
 	end
 
