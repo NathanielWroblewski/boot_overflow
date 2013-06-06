@@ -9,7 +9,7 @@ describe "signing up" do
 	let(:password_confirmation) {"password"}
 	let(:bad_conf) {"passwrod"}
 
-  context "with valid info" do
+	context "with valid info" do
 		it "signs me up", :js=>true do
 			visit new_user_path
 			within ('#new_user') do
@@ -37,6 +37,20 @@ describe "signing up" do
 			click_button "Sign Up"
 			page.should have_content "Login"
 		end
+	end	
+end
+
+describe "voting" do
+
+	context	"upvoting" do
+		it "" do
+
+		end
 	end
-	
+
+	context "downvoting" do
+		it "" do
+			pending
+		end
+	end
 end
