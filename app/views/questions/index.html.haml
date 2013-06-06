@@ -6,7 +6,7 @@
     = question.title
     = question.content
     = question.votes
-    = link_to "Up Vote", question_upvotes_path(question), :method => :post, :remote => true 
-    = link_to "Down Vote", question_upvotes_path(question), :method => :post, :remote => true 
+    = link_to "&#8593;".html_safe, question_upvotes_path(question), :method => :post, :remote => true 
+    = link_to "&#8595;".html_safe, question_downvotes_path(question), :method => :post, :remote => true 
     %br
     %br
