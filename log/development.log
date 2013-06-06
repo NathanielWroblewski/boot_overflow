@@ -1,0 +1,478 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:26:54 -0700
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (13.3ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  Rendered questions/index.html.haml within layouts/application (3.6ms)
+  Rendered questions/_nav.html.haml (3.4ms)
+Completed 200 OK in 581ms (Views: 125.0ms | ActiveRecord: 389.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:26:55 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:26:55 -0700
+Served asset /jquery.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:26:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:26:55 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:28:28 -0700
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" 
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+Compiled application.css  (1ms)  (pid 1400)
+  Rendered questions/_nav.html.haml (0.6ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:28:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:28:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:28:28 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:28:28 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:29:05 -0700
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 1400)
+  Rendered questions/_nav.html.haml (0.6ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:29:05 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:29:05 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:29:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:29:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:30:06 -0700
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" 
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+  Rendered questions/_nav.html.haml (18.4ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+    2:   
+    3:   %ul
+    4:   %li = link_to "Home", root_path
+    5:     - if @user
+    6:       %li
+    7:         = link_to "Profile", user_path
+    8:       %li
+  app/views/questions/_nav.html.haml:5
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__2576636023280109834_70360268124340'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (34.6ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (64.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:30:21 -0700
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+ERROR: compiling _app_views_questions__nav_html_haml___297570126950811721_70360255405000 RAISED /Users/apprentice/Desktop/boot_overflow/app/views/questions/_nav.html.haml:19: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_questions__nav_html_haml___297570126950811721_70360255405000(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "questions/_nav";_old_output_buffer = @output_buffer;nav = local_assigns[:nav];;begin;extend Haml::Helpers;_hamlout = @haml_buffer = Haml::Buffer.new(haml_buffer, {:autoclose=>["meta", "img", "link", "br", "hr", "input", "area", "param", "col", "base"], :preserve=>["textarea", "pre", "code"], :attr_wrapper=>"'", :ugly=>false, :format=>:html5, :encoding=>"UTF-8", :escape_html=>true, :escape_attrs=>true, :hyphenate_data_attrs=>true, :cdata=>false});_erbout = _hamlout.buffer;@output_buffer = output_buffer ||= ActionView::OutputBuffer.new rescue nil;;_hamlout.push_text("<nav>\n  <ul></ul>\n  <li></li>\n  ", 1, false);
+
+
+
+haml_temp =  link_to "Home", root_path
+ if @user
+_hamlout.push_text("  <li>\n    #{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to "Profile", user_path
+));}\n  </li>\n  <li>\n    #{
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to "Ask Question", new_question_path
+));}\n  </li>\n  <li>\n    #{
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to "Logout", user_logout_path
+));}\n  </li>\n", -1, false); else
+_hamlout.push_text("  <li>\n    #{_hamlout.adjust_tabs(1); 
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to "Login", user_login_path
+));}\n  </li>\n  <li>\n    #{
+_hamlout.format_script_false_false_false_true_false_true_false(( link_to "Sign Up", new_user_path
+));}\n  </li>\n", -1, false);end;end;_hamlout.buffer << _hamlout.format_script_false_false_false_true_false_false_false(haml_temp);_hamlout.push_text("\n</nav>\n", -1, false);::Haml::Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer.upper if @haml_buffer;end;
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/partial_renderer.rb:237:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:15:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/haml-4.0.2/lib/haml/helpers/action_view_mods.rb:10:in `block in render_with_haml'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/haml-4.0.2/lib/haml/helpers.rb:89:in `non_haml'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/haml-4.0.2/lib/haml/helpers/action_view_mods.rb:10:in `render_with_haml'
+/Users/apprentice/Desktop/boot_overflow/app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__2576636023280109834_70360268124340'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:145:in `block in render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/apprentice/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__1528447084009633850__process_action__3191711423089468283__callbacks'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__1317422312152648605__call__3110318589152625243__callbacks'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/apprentice/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/Users/apprentice/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/Users/apprentice/.rvm/rubies/ruby-1.9.3-p374/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered questions/_nav.html.haml (2.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (/Users/apprentice/Desktop/boot_overflow/app/views/questions/_nav.html.haml:19: syntax error, unexpected keyword_ensure, expecting $end):
+    16:       %li
+    17:         = link_to "Sign Up", new_user_path
+  app/views/layouts/application.html.haml:8:in `_app_views_layouts_application_html_haml__2576636023280109834_70360268124340'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:31:32 -0700
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" 
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+  Rendered questions/_nav.html.haml (4.0ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:31:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:31:32 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:31:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:31:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:32:48 -0700
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+  Rendered questions/_nav.html.haml (4.3ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:32:48 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:32:48 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:32:48 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:32:48 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:34:09 -0700
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" 
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 1400)
+  Rendered questions/_nav.html.haml (1.0ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:34:09 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:09 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:09 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:09 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:34:12 -0700
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+  Rendered questions/_nav.html.haml (0.7ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:12 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:12 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:34:12 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:12 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:34:27 -0700
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" 
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 1400)
+  Rendered questions/_nav.html.haml (1.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:34:27 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:27 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:27 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:27 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:34:40 -0700
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+  Rendered questions/_nav.html.haml (0.7ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:34:40 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:40 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:40 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:40 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at 2013-06-05 17:34:41 -0700
+Processing by UsersController#login as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/helpers/users_helper.rb:23:in `authenticate_user'
+  app/controllers/users_controller.rb:28:in `login'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:34:59 -0700
+Processing by QuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" 
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+  Rendered questions/_nav.html.haml (0.8ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:34:59 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:59 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:59 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:34:59 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at 2013-06-05 17:35:02 -0700
+Processing by UsersController#login as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/helpers/users_helper.rb:23:in `authenticate_user'
+  app/controllers/users_controller.rb:28:in `login'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:37:15 -0700
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" [0m
+  Rendered questions/index.html.haml within layouts/application (0.1ms)
+  Rendered questions/_nav.html.haml (1.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-05 17:37:15 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-05 17:37:15 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-05 17:37:15 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-05 17:37:15 -0700
+Served asset /jquery.js - 200 OK (0ms)
