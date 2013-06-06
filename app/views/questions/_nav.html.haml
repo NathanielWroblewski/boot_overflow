@@ -3,7 +3,7 @@
   %ul
     %li 
       = link_to "Home", root_path
-    - if @user
+    - if current_user
       %li
         = link_to "Profile", profile_path
       %li
