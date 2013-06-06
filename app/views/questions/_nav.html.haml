@@ -1,6 +1,8 @@
 %nav
-  = link_to "Home", root_path
+  
   %ul
+    %li 
+      = link_to "Home", root_path
     - if @user
       %li
         = link_to "Profile", user_path

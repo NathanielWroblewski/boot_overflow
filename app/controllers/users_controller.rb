@@ -1,19 +1,18 @@
 class UsersController < ApplicationController
-		include UserHelper
+		include UsersHelper
 	
 	def create
 		@user = new_user(params[:user])
 	end
 
 	def new
+		@user = User.new
 	end
 
 	def edit
-		# fill in form with details of current_user
 	end
 
 	def show
-		# show current_user
 	end
 
 	def update
@@ -21,7 +20,6 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-		# flash something
 		current_user.destroy
 		redirect '/'
 	end 
