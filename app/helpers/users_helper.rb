@@ -8,14 +8,15 @@ module UsersHelper
 	end
 
 	def new_user(details)
-		user = User.new(name: details[:name], username: details[:username])
+		user = User.new(name: details[:name], username: details[:username], email: details[:email])
 		user.password = details[:password]
 		user.password_confirmation = details[:password_confirmation]
 		if user.save
 			session[:id] = user.id
-			redirect '/profile'
+			redirect_to profile_path
 		else
 			flash[:notice] = "Password did not match confirmation"
+			redirect_to root_path
 		end
 	end
 

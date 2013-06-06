@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
 	def create
 		@user = new_user(params[:user])
+
 	end
 
 

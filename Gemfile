@@ -6,7 +6,6 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -26,6 +25,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'sextant'
 
 group :development, :test do
+  gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 2.0'
   gem "factory_girl_rails", "~> 4.0"
   gem 'shoulda-matchers'
