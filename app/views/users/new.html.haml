@@ -1,7 +1,20 @@
 .container 
   %h1 Please Sign up!
-  - form_for @user do |f|
-    = f.name :name
-    = f.username :username
-    = f.email :email
-    = f.password :password
+  = form_for(@user, :action => "new") do |f|
+    %p
+      = f.label :name
+    %p
+      = f.text_field :name
+    %p
+      = f.label :username
+    %p
+      = f.text_field :username
+    %p
+      = f.label :email
+    %p 
+      = f.text_field :email
+    %p
+      = f.label :password
+    %p 
+      = f.text_field :password
+      = f.submit "Sign-Up"

@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
 		include UsersHelper
 	
+  def new
+    @user = User.new
+  end
+
 	def create
 		@user = new_user(params[:user])
 	end
 
-	def new
-		@user = User.new
-	end
+
 
 	def edit
 	end
