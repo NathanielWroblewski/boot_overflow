@@ -5,7 +5,9 @@ class QuestionsController < ApplicationController
 	end
 
 	def create
-		@question = Question.create(params[:question])
+		p params
+		@question = Question.create(title: params[:question][:title], content: params[:question][:content], 
+			user_id: current_user.id)
 		redirect_to questions_path(@question)
 	end
 
