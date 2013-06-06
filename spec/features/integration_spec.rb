@@ -11,7 +11,7 @@ describe "signing up" do
 
   context "with valid info" do
 		it "signs me up", :js=>true do
-			visit "/users/new"
+			visit new_user_path
 			within ('#new_user') do
 				fill_in "Name", :with => name
 				fill_in "Username", :with => username

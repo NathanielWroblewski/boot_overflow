@@ -38,16 +38,4 @@ class QuestionsController < ApplicationController
 		end
 	end 
 
- # #UPVOTE AND DOWNVOTE
-
- # def up_vote
- # 	@question = Question.find(params[:question])
- # 	current_user.up_vote(@question)
- # end
-
- # def down_vote
- # 	@question = Question.find(params[:question])
- # 	current_user.down_vote(@question)
- # end
-
 end
