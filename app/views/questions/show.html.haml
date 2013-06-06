@@ -1,2 +1,27 @@
 .container 
-  %h1 Here's your one question!
+  %p
+    = @question.votes
+    = @question.title
+    = @question.content
+    = link_to "&#9650;".html_safe, question_upvotes_path(@question), :method => :post, :remote => true 
+    = link_to "&#9660;".html_safe, question_downvotes_path(@question), :method => :post, :remote => true 
+    %br
+    %br
+
+
+  %p
+    = form_for [@question, @answer] do |f|
+      = f.label "Title:"
+      = f.text_field :title
+      = f.label "Add Answer:"
+      = f.text_field :content
+      = f.submit
+
+  %p
+    - @question.answers.each do |answer|
+      = answer.votes
+      = answer.title
+      = answer.content
+      = link_to "&#9650;".html_safe, question_answer_upvotes_path(@question, answer), :method => :post 
+      = link_to "&#9660;".html_safe, question_answer_downvotes_path(@question, answer), :method => :post 
+      

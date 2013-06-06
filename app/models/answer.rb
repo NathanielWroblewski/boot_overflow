@@ -4,6 +4,7 @@ class Answer < ActiveRecord::Base
   belongs_to :question
   belongs_to :user
 
+  make_voteable
 
   validates :title, :presence => true
   validates :content, :presence => true

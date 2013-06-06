@@ -1,5 +1,8 @@
 class AnswersController < ApplicationController
 	def create
+		@question = Question.find(params[:question_id])
+		@answer = Answer.create(title: params[:answer][:title], content: params[:answer][:content], user_id: current_user.id, question_id: params[:question_id])
+		redirect_to @question
 	end
 
 	def new
