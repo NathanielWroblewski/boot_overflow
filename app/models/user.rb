@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+  make_voter
+
   validates :name, :presence => true 
   validates :username, :uniqueness => true
   validates :email, :presence => true, :uniqueness => true

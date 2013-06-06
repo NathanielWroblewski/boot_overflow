@@ -1,7 +1,9 @@
 .container 
   %h1 Ask a new Question!
-  - form_for @question do |f|
-    = f.
-    = f.
-    = f.
-    = f.
+  = form_for @question do |f|
+    = f.label "Title:"
+    = f.text_field :title
+    = f.label "Content:"
+    = f.text_area :content
+    = f.submit
+   

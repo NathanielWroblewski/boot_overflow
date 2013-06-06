@@ -1,6 +1,7 @@
 class Question < ActiveRecord::Base
   attr_accessible :title, :content, :user_id
-  
+  make_voteable
+
   belongs_to :user
   has_many :answers
 
