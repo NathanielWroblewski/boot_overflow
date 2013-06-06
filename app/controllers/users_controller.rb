@@ -27,7 +27,13 @@ class UsersController < ApplicationController
 	end 
   
   def login
-  	authenticate_user(params[:user])  
+
+  end
+
+  def authenticate
+  	authenticate_user(params[:user]) 
+    puts "*" * 100
+    puts "yay!" 
   end
 
   def logout

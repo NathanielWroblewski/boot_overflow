@@ -1,2 +1,10 @@
 .container 
   %h1 Please Log in!
+  = form_tag user_login_path do
+    #email
+    = label_tag :email
+    = text_field_tag :email, params[:email]
+    #password
+    = label_tag :password
+    = password_field_tag :password
+    = submit_tag "Log In"

@@ -9,6 +9,7 @@ BootOverflow::Application.routes.draw do
   end
   
   get "/user/login" => 'users#login'
+  post "/user/login" => 'users#authenticate'
   get "/user/logout" => 'users#logout'
 
 end
