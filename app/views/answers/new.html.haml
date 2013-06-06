@@ -1,7 +1,8 @@
 .container 
   %h1 Write a new Answer!
   - form_for @answer do |f|
-    = f.
-    = f.
-    = f.
-    = f.
+    = f.label "Title:"
+    = f.text_field :title
+    = f.label "Add Answer:"
+    = f.text_field :content
+    = f.submit
