@@ -70,6 +70,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    make_voteable (0.1.1)
+      activerecord (~> 3.0)
     mime-types (1.23)
     multi_json (1.7.6)
     nokogiri (1.5.9)
@@ -156,6 +158,7 @@ DEPENDENCIES
   faker
   haml
   jquery-rails
+  make_voteable
   pg
   rails (= 3.2.13)
   rspec-rails (~> 2.0)

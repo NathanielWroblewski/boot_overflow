@@ -23,6 +23,7 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'sextant'
+gem 'make_voteable'
 
 group :development, :test do
   gem 'selenium-webdriver'
