@@ -3,6 +3,11 @@ BootOverflow::Application.routes.draw do
   root :to => 'questions#index'
   resources :users , :except => [:index]
   match '/profile' => 'users#show'
+
+  resources :questions do
+    resources :upvotes
+    resources :downvotes
+  end
   
   resources :questions do
     resources :answers, :except => [:index, :show]

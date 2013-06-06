@@ -1,8 +1,8 @@
 class QuestionsController < ApplicationController
 
-  def index
-  	@questions = Question.all
-  end
+	def index
+		@questions = Question.all
+	end
 
 	def create
 		@question = Question.create(params[:question])
@@ -37,5 +37,17 @@ class QuestionsController < ApplicationController
 			flash[:notice] = "You cannot delete another user's question"
 		end
 	end 
+
+ # #UPVOTE AND DOWNVOTE
+
+ # def up_vote
+ # 	@question = Question.find(params[:question])
+ # 	current_user.up_vote(@question)
+ # end
+
+ # def down_vote
+ # 	@question = Question.find(params[:question])
+ # 	current_user.down_vote(@question)
+ # end
 
 end

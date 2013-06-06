@@ -1,2 +1,9 @@
 .container 
   %h1 Welcome New Boots!
+
+
+  - @questions.each do |question| 
+    = question.title
+    = question.content
+    = link_to "Up Vote", question_upvotes_path(question, current_user), :method => :post, :remote => true 
+    = link_to "Down Vote", question_upvotes_path(question, current_user), :method => :post, :remote => true 
