@@ -10,7 +10,7 @@ module Authentication
     @user = User.find_by_email(info[:email])
     if @user && @user.authenticate(info[:password])
       session[:id] = @user.id
-      redirect '/profile'
+      redirect_to '/profile'
     else
       flash[:notice] = "Bad password"
     end

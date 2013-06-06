@@ -5,12 +5,9 @@ BootOverflow::Application.routes.draw do
   match '/profile' => 'users#show'
 
   resources :questions do
+    resources :answers, :except => [:index, :show]
     resources :upvotes
     resources :downvotes
-  end
-  
-  resources :questions do
-    resources :answers, :except => [:index, :show]
   end
   
   get "/user/login" => 'users#login'
