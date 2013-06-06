@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates :password_digest, :presence => true
 
 
-  attr_accessible :name, :username, :email, :password_digest
+  attr_accessible :name, :username, :email, :password, :password_confirmation
 
   has_secure_password
   has_many :questions

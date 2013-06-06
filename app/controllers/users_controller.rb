@@ -1,13 +1,16 @@
 class UsersController < ApplicationController
-		include UsersHelper
 	
   def new
     @user = User.new
   end
 
 	def create
-		@user = new_user(params[:user])
-
+    @user = User.new(params[:user])
+    if @user.save
+      redirect_to @user
+    else
+      render :new
+    end
 	end
 
 
