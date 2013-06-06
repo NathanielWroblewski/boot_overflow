@@ -36,9 +36,6 @@ class UsersController < ApplicationController
 
   def authenticate
   	authenticate_user(params) 
-    puts "*" * 100
-    puts "yay!" 
-    redirect_to '/user/login'
   end
 
   def logout

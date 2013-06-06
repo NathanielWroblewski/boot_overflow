@@ -1,2 +1,12 @@
 .container 
   %h1 Welcome New Boots!
+
+
+  - @questions.each do |question| 
+    = question.title
+    = question.content
+    = question.votes
+    = link_to "&#8593;".html_safe, question_upvotes_path(question), :method => :post, :remote => true 
+    = link_to "&#8595;".html_safe, question_downvotes_path(question), :method => :post, :remote => true 
+    %br
+    %br
