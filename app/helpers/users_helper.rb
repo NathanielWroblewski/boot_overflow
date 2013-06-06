@@ -21,7 +21,7 @@ module UsersHelper
 
 	def authenticate_user(info)
 		@user = User.find_by_email(info[:email])
-		if @user.authenticate(info[:password])
+		if @user && @user.authenticate(info[:password])
 			session[:id] = @user.id
 			redirect '/profile'
 		else

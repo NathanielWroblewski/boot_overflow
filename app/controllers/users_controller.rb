@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
 	def destroy
 		current_user.destroy
-		redirect '/'
+		redirect_to '/'
 	end 
   
   def login
@@ -29,14 +29,15 @@ class UsersController < ApplicationController
   end
 
   def authenticate
-  	authenticate_user(params[:user]) 
+  	authenticate_user(params) 
     puts "*" * 100
     puts "yay!" 
+    redirect_to '/user/login'
   end
 
   def logout
   	session.clear
-  	redirect '/'
+  	redirect_to '/'
   end
 
 end
