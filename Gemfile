@@ -32,6 +32,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'faker'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 gem 'haml'

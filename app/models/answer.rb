@@ -1,5 +1,5 @@
 class Answer < ActiveRecord::Base
-  attr_accessible :title, :content, :user_id, :question_id
+  attr_accessible :title, :content, :user_id, :question_id, :up_votes, :down_votes
 
   belongs_to :question
   belongs_to :user

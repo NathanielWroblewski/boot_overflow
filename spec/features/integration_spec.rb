@@ -9,7 +9,7 @@ describe "signing up" do
 	let(:password_confirmation) {"password"}
 	let(:bad_conf) {"passwrod"}
 
-  context "with valid info" do
+	context "with valid info" do
 		it "signs me up", :js=>true do
 			visit new_user_path
 			within ('#new_user') do
@@ -37,6 +37,31 @@ describe "signing up" do
 			click_button "Sign Up"
 			page.should have_content "Login"
 		end
+	end	
+end
+
+describe "voting" do
+	before do
+		 create(:user)
+		 create(:user)
 	end
+	let(:question1) {create (:question)}
+	let(:question2) {create (:question)}
+	let(:question3) {create (:question)}
 	
+	context	"upvoting" do
+		it "upvote a question", :js => true do
+			visit "/questions"
+
+     expect {
+      click_link ('question1')
+      }.to change(Question, :up_vote).by(1)
+		end
+	end
+
+	context "downvoting" do
+		it "" do
+			pending
+		end
+	end
 end
