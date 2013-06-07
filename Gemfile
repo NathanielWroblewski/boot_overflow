@@ -33,6 +33,7 @@ group :development, :test do
   gem 'faker'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'debugger'
 end
 
 gem 'haml'

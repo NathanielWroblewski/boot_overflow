@@ -2,8 +2,10 @@
   %h1 Welcome New Boots!
 
   - @questions.each_with_index do |question, index| 
-    = question.title
-    = question.content
-    = question.votes
-    = link_to "&#8593;".html_safe, question_upvotes_path(question), :method => :post, :id => 'question' + index, :remote => true 
-    = link_to "&#8595;".html_safe, question_downvotes_path(question), :method => :post, :remote => true 
+    %ul
+      %li
+        = question.title
+        = question.content
+        = question.votes
+        = link_to "&#8593;".html_safe, question_upvotes_path(question), :method => :post, :id => 'upvote' + (index + 1).to_s, :remote => true 
+        = link_to "&#8595;".html_safe, question_downvotes_path(question), :method => :post, :id => 'downvote' + (index + 1).to_s, :remote => true 

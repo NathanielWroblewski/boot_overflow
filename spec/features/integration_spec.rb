@@ -41,27 +41,30 @@ describe "signing up" do
 end
 
 describe "voting" do
-	before do
-		 create(:user)
-		 create(:user)
-	end
-	let(:question1) {create (:question)}
-	let(:question2) {create (:question)}
-	let(:question3) {create (:question)}
 	
+	let!(:user1) { create (:user) }
+	let(:user2) { create (:user) }
+
+	let!(:question) {create (:question)}
+
 	context	"upvoting" do
 		it "upvote a question", :js => true do
-			visit "/questions"
+			visit user_login_path
 
-     expect {
-      click_link ('question1')
-      }.to change(Question, :up_vote).by(1)
+			expect {
+				fill_in "email", :with => user1.email
+				fill_in "password", :with => user1.password
+				click_button "Log In"
+				visit questions_path
+				
+				find('#upvote1').click
+				}.to change(question, :up_votes).by(1)
+			end
+		end
+
+		context "downvoting" do
+			it "" do
+				pending
+			end
 		end
 	end
-
-	context "downvoting" do
-		it "" do
-			pending
-		end
-	end
-end
